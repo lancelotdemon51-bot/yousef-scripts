@@ -1,7 +1,14 @@
 -- ============================================================
 --  Yousef | Aim Assist Anti-Ban
 -- ============================================================
-
+-- Anti-bypass check.
+if not _G["YOUSEF-OWNER-123"] then
+    local player = game:GetService("Players").LocalPlayer
+    if player then
+        player:Kick("Unauthorized execution. Please use the official key system.")
+    end
+    return
+end
 -- Services.
 local playersService = game:GetService("Players")
 local runService = game:GetService("RunService")
